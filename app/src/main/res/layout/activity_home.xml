@@ -34,6 +34,8 @@
 
         <!-- bottom nav bar -->
 
+        <include layout="@layout/layout_bottom_navigation_view"/>
+
     </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
