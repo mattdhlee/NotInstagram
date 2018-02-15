@@ -1,7 +1,8 @@
 package mattlee.notinstagram;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
@@ -9,9 +10,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import mattlee.notinstagram.Utils.BottomNavigationViewHelper;
 
-public class HomeActivity extends AppCompatActivity {
 
-    private static final String TAG = "HomeActivity";
+public class ProfileActivity extends AppCompatActivity {
+
+    private static final String TAG = "ProfileActivity";
     @BindView(R.id.bottomNavViewBar) BottomNavigationViewEx mBottomNavigationViewEx;
 
     @Override
@@ -20,13 +22,11 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
 
+        Log.d(TAG, "oncreate: starting test");
 
         setUpBottomNavigationView();
     }
-
-    /**
-     * BottomNavigationView set up
-     */
+    
     private void setUpBottomNavigationView() {
         //BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.)
         BottomNavigationViewHelper.setUpBottomNavigationView(mBottomNavigationViewEx);
